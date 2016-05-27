@@ -7,15 +7,6 @@ a {
   color: #00B7FF;
 }
 
-h1, h3 {
+h1 {
   display: inline;
-}
-
-h3 {
-  vertical-align: text-bottom;
-  padding: 10px;
-}
-
-h3 a {
-  color: #002AFF;
 }
