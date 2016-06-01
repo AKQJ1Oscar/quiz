@@ -73,7 +73,7 @@ exports.update = function(req, res, next) {
 	}
 	req.user.save({ fields: ["password", "salt"] }).then(function(user) {
 		req.flash('success', 'Usuario editado con éxito.');
-		res.redirect('/users'); // Redirección HTTP a lista de preguntas.
+		res.redirect('/session'); // Redirección HTTP
 	}).catch(Sequelize.ValidationError, function(error) {
 		req.flash('error', 'Errores en el formulario:');
 		for (var i in error.errors) {

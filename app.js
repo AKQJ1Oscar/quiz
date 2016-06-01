@@ -9,6 +9,7 @@ var partials = require('express-partials');
 var flash = require('express-flash');
 var methodOverride = require('method-override');
 var routes = require('./routes/index');
+var url = require('url');
 var app = express();
 
 // view engine setup
