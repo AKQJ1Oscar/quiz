@@ -1,0 +1,14 @@
+<h2 style="display: inline-block;">¡Respuesta <%= result %>!</h2><img src="/images/<%= result %>.png" alt="Respuesta <%= result %>" height="30" width="30" style="margin: 0 0 10px 5px;">
+<p>
+	La respuesta <strong> <%= answer %> </strong> es <%= result %>.
+</p>
+<% if (result == "correcta") { %>
+<p>
+	<a href="/quizzes"> Pruebe con otra pregunta </a>
+</p>
+<% } else { %>
+<p>
+	<a href="/quizzes/<%= quiz.id %>?answer=<%= answer %>"> Inténtelo otra vez </a><br>
+	<a href="/quizzes"> Pruebe con otra pregunta </a>
+</p>
+<% } %>

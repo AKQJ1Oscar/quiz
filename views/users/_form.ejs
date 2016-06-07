@@ -1,0 +1,35 @@
+<script>
+   function confirmPassword() {
+      var pw1 = document.getElementById('user_password').value;
+      var pw2 = document.getElementById('user_confirm_password').value;
+      if (pw1 === pw2) {
+         return true;
+      } else {
+         alert('Los passwords introducidos no coinciden.');
+         return false;
+      }
+   }
+</script>
+<div>
+	<% if (!user.id) { %>
+		<label for="preg" class="rem">Usuario:</label>
+      <br />
+		<input type="text" id="username" name="user[username]" value="<%= user.username %>" required size="30" class="form-control" style="width: 180px;" />
+	<% } else { %>
+		Username: <%= user.username %>
+	<% } %>
+</div>
+<div style="margin-top: 10px;">
+	<label for="user_password" class="rem">Contraseña:</label>
+   <br />
+	<input type="password" id="user_password" name="user[password]" required size="30" class="form-control" style="width: 180px;" />
+</div>
+<div style="margin-top: 10px;">
+	<label for="user_confirm_password" class="rem">Confirmar Contraseña:</label>
+   <br />
+	<input type="password" id="user_confirm_password" required size="30" class="form-control" style="width: 180px;" />
+</div>
+<div>
+   <input type="submit" value="Confirmar" onclick="return confirmPassword()" class="btn btn-primary" style="margin-top: 15px;">
+   <a href="/"><button type="button" class="btn" style="margin-top: 15px;">Cancelar</button></a>
+</div>

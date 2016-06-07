@@ -1,21 +1,120 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*                    { margin: 0; padding: 0; }
+
+body                 { font-size: 16px !important; 
+                       color: white;
+                     }
+
+.page                { margin: 2% auto; 
+                       color: white;}
+
+.main                { padding: 2%;
+                       margin-bottom: 1px;
+                       background: #eee;
+                     }
+
+a                    { color: #00B7FF; }
+
+
+section > div        { padding: 20px; 
+					             padding-top: 0;
+            				 }
+
+header               { text-align: center;
+              	       background: #3F51B5 !important;
+              	       color: white;
+              	     }
+nav                  { text-align: center;}
+section              { text-align: left;}
+footer               { text-align: center;}
+
+nav a                { margin: 0px 10px 0px 0px; }
+
+.right               { float: right;
+                       margin-top: -0.75%;
+                     }
+
+#cuerpo 	           { background: white; }
+
+.headerlink 	       { color: white }
+
+.headerlink:hover    { color: white }
+
+#flashinfo {
+  width: 450px;
+  border: 2px solid blue;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #000; 
 }
 
-a {
-  color: #00B7FF;
+#flashinfo h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #00c;
+    color: #ffffff; 
 }
 
-#titulo, h3 {
-  display: inline;
+#flashinfo ul li {
+    margin: 5px 5px 5px 15px;
+    font-size: 12px;
+    list-style: square; 
 }
 
-h3 {
-  vertical-align: text-bottom;
-  padding: 10px;
+
+#flashsuccess {
+  width: 450px;
+  border: 2px solid green;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #000; 
 }
 
-h3 a {
-  color: #002AFF;
+#flashsuccess h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #0c0;
+}
+
+#flashsuccess ul li {
+    margin: 5px 5px 5px 15px;
+    font-size: 12px;
+    list-style: square; 
+}
+
+#flasherror {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #000; 
+}
+
+#flasherror h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+}
+
+#flasherror ul li {
+    margin: 5px 5px 5px 15px;
+    font-size: 12px;
+    list-style: square;
 }

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Quiz - Registro</title>
-		<link rel='stylesheet' href='/stylesheets/style.css' />
-	</head>
-	<body>
-		<h1>Crear usuario:</h1>
-		<p>
-			<form method="post" action="/users" >
-				<% include form.ejs %>
-			</form>
-		</p>
-	</body>
-</html>
+<h2>Crear cuenta</h2>
+<form method="post" action="/users" >
+	<% include _form.ejs %>
+</form>

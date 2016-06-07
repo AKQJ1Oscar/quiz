@@ -1,5 +1,7 @@
 # quiz
 CORE - Quiz 2016
+Deployed app: https://quiz-core-2016.herokuapp.com
+Original project: https://github.com/jquemada/quiz-2015
 
 ### How to install
 

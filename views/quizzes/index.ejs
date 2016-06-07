@@ -1,0 +1,30 @@
+<h2 style="display: inline-block;">Preguntas</h2>
+<form method = "get" action="/quizzes" style="display: inline; vertical-align: super; padding-left: 10px;">
+	<input class="form-control" type="text" name="search" value="" placeholder="Buscar pregunta" required style="display: inline; width: 180px; font-size: 13px; height: 32px;"/>
+	<input class="btn btn-primary" type="submit" value="&#61442;" style="font-size: 13px; font-family: FontAwesome; margin: 0px 0 0 -10px; border-radius: 0 4px 4px 0;">
+</form>
+<% if (subtitulo == 1) { %>
+<p>Resultados de la búsqueda - <a href="/quizzes">Mostrar todas las preguntas</a></p>
+<% } %>
+<table>
+	<% for (var i in quizzes) { %>        
+	<tr>
+		<td>
+			<a href="/quizzes/<%= quizzes[i].id %>"><%= quizzes[i].question %></a>
+		</td>
+		<% if (session.user) { %>
+		<% if (session.user.isAdmin || session.user.id === quizzes[i].AuthorId) { %>
+		<td>
+			<a href="/quizzes/<%= quizzes[i].id %>/edit"><button class="btn btn-primary" style="padding: 2px 4px;">Editar</button></a>
+		</td>
+		<td>
+			<a href="/quizzes/<%= quizzes[i].id %>?_method=DELETE" onClick="return confirm('Borrar: <%= quizzes[i].question %>');"><button class="btn btn-primary" style="padding: 2px 4px;">Borrar</button></a>
+		</td>
+		<% } %>
+		<% } %>
+	</tr> 
+	<% } %>
+</table>
+<% if (session.user) { %>
+<a href="/quizzes/new"><button class="btn btn-primary" type="button" style="margin-top: 10px;">Crear pregunta</button></a>
+<% } %>
