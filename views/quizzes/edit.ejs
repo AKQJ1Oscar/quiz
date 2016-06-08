@@ -1,10 +1,9 @@
-
+<h2 style="display: inline-block;">Preguntas</h2>
 <p>
-Edite la pregunta
+	Editar pregunta
 </p>
-
 <p>
-  <form method="post" action="/quizzes/<%= quiz.id %>?_method=PUT" >      
-     <% include _form.ejs %>
-  </form>
+	<form method="post" action="/quizzes/<%= quiz.id %>?_method=PUT" >      
+		<% include _form.ejs %>
+	</form>
 </p>
